@@ -1,5 +1,5 @@
 {
-    "name": "odm/odm",
+    "name": "lynxgroup/odm",
     "type": "library",
     "description": "Oject document manager - flat filesystem database",
     "require": {
