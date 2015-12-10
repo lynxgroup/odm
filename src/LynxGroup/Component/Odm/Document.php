@@ -1,6 +1,10 @@
 <?php namespace Component\Odm;
 
-class Document
+use LynxGroup\Contracts\Odm\Document as DocumentInterface;
+
+use LynxGroup\Component\Odm\Odm;
+
+class Document implements DocumentInterface
 {
 	protected $odm;
 
@@ -18,7 +22,7 @@ class Document
 
 	protected $dirty;
 
-	public function __construct(\Component\Odm\Odm $odm, $id, $deleted, $created, $updated, array $data, $path)
+	public function __construct(Odm $odm, $id, $deleted, $created, $updated, array $data, $path)
 	{
 		$this->odm = $odm;
 

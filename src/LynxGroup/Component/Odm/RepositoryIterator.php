@@ -1,8 +1,10 @@
 <?php namespace LynxGroup\Component\Odm;
 
-use LynxGroup\Component\Odm\Repository;
+use LynxGroup\Contracts\Odm\RepositoryIterator as RepositoryIteratorInterface;
 
-class RepositoryIterator implements \Iterator
+use LynxGroup\Contracts\Odm\Repository;
+
+class RepositoryIterator implements \RepositoryIteratorInterface
 {
 	protected $repository;
 

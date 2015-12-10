@@ -1,9 +1,14 @@
 <?php namespace LynxGroup\Component\Odm;
 
-use LynxGroup\Component\Odm\Odm;
-use LynxGroup\Component\Odm\Document;
+use LynxGroup\Contracts\Odm\Repository as RepositoryInterface;
 
-class Repository
+use LynxGroup\Contracts\Odm\Odm;
+
+use LynxGroup\Contracts\Odm\Document;
+
+use LynxGroup\Contracts\Odm\Query;
+
+class Repository implements RepositoryInterface
 {
 	const LENGTH = 512;
 

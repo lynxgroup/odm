@@ -1,7 +1,9 @@
 <?php namespace LynxGroup\Component\Odm;
 
-use LynxGroup\Component\Odm\Repository;
-use LynxGroup\Component\Odm\RepositoryIterator;
+use LynxGroup\Contracts\Odm\Query as QueryInterface;
+
+use LynxGroup\Contracts\Odm\Repository;
+use LynxGroup\Contracts\Odm\RepositoryIterator;
 
 class Query implements \IteratorAggregate
 {
