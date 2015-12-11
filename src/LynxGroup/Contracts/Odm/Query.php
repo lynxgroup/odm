@@ -1,9 +1,8 @@
 <?php namespace LynxGroup\Contracts\Odm;
 
 use LynxGroup\Contracts\Odm\Repository;
-//use LynxGroup\Component\Odm\RepositoryIterator;
 
-interface Query implements \IteratorAggregate
+interface Query extends \IteratorAggregate
 {
 	public function __construct(Repository $repository);
 

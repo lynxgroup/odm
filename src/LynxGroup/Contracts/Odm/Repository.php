@@ -1,7 +1,6 @@
 <?php namespace LynxGroup\Contracts\Odm;
 
 use LynxGroup\Contracts\Odm\Odm;
-use LynxGroup\Contracts\Odm\Document;
 
 interface Repository
 {
@@ -16,8 +15,6 @@ interface Repository
 	public function create($class = null);
 
 	public function flash();
-
-	protected function save(Document $document);
 
 	public function load($id);
 
