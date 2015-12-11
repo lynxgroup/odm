@@ -2,7 +2,7 @@
 
 use LynxGroup\Contracts\Odm\Repository as RepositoryInterface;
 
-use LynxGroup\Contracts\Odm\Odm;
+use LynxGroup\Contracts\Odm\Odm as OdmRepository;
 
 use LynxGroup\Contracts\Odm\Document;
 
@@ -26,8 +26,10 @@ class Repository implements RepositoryInterface
 
 	protected $globals = [];
 
-	public function __construct(Odm $odm, $index_path, $create_path, $class, $globals_path)
+	public function __construct(OdmRepository $odm, $index_path, $create_path, $class, $globals_path)
 	{
+		$umask = umask(0);
+
 		$this->odm = $odm;
 
 		if( !is_dir(dirname($index_path)) )
@@ -57,6 +59,8 @@ class Repository implements RepositoryInterface
 		{
 			$this->globals = json_decode(file_get_contents($this->globals_path), true);
 		}
+
+		umask($umask);
 	}
 
 	public function __destruct()

@@ -2,15 +2,15 @@
 
 use LynxGroup\Contracts\Odm\RepositoryIterator as RepositoryIteratorInterface;
 
-use LynxGroup\Contracts\Odm\Repository;
+use LynxGroup\Contracts\Odm\Repository as RepositoryInterface;
 
-class RepositoryIterator implements \RepositoryIteratorInterface
+class RepositoryIterator implements RepositoryIteratorInterface
 {
 	protected $repository;
 
 	protected $id = 1;
 
-	public function __construct(Repository $repository)
+	public function __construct(RepositoryInterface $repository)
 	{
 		$this->repository = $repository;
 	}

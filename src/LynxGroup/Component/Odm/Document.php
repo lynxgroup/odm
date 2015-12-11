@@ -1,4 +1,4 @@
-<?php namespace Component\Odm;
+<?php namespace LynxGroup\Component\Odm;
 
 use LynxGroup\Contracts\Odm\Document as DocumentInterface;
 

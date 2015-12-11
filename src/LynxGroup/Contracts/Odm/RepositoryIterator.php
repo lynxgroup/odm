@@ -1,5 +1,5 @@
 <?php namespace LynxGroup\Contracts\Odm;
 
-interface RepositoryIterator implements \Iterator
+interface RepositoryIterator extends \Iterator
 {
 }

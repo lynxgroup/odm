@@ -12,7 +12,7 @@ interface Document
 
 	public function setDirty($dirty = true);
 
-	public function isDirty()
+	public function isDirty();
 
 	public function getCreated();
 

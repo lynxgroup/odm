@@ -2,8 +2,7 @@
 
 use LynxGroup\Contracts\Odm\Query as QueryInterface;
 
-use LynxGroup\Contracts\Odm\Repository;
-use LynxGroup\Contracts\Odm\RepositoryIterator;
+use LynxGroup\Contracts\Odm\Repository as RepositoryInterface;
 
 class Query implements \IteratorAggregate
 {
@@ -21,7 +20,7 @@ class Query implements \IteratorAggregate
 
 	protected $count = -1;
 
-	public function __construct(Repository $repository)
+	public function __construct(RepositoryInterface $repository)
 	{
 		$this->repository = $repository;
 	}

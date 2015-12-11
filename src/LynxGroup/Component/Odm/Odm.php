@@ -12,6 +12,8 @@ class Odm implements OdmInterface
 
     public function __construct($lock_path, array $repositories)
     {
+		$umask = umask(0);
+
         if( !is_dir(dirname($lock_path)) )
         {
             mkdir(dirname($lock_path), 0777, true);
@@ -22,6 +24,8 @@ class Odm implements OdmInterface
         flock($this->handler, LOCK_EX);
 
         $this->repositories = $repositories;
+
+		umask($umask);
     }
 
     public function __destruct()
